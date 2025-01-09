@@ -17,17 +17,18 @@ Taking the above 3 problem statements into consideration I implemented python an
 
 2.sensor_client.py - This script connects to a sensor server, sends a start command with an interval, receives and decodes sensor data, and provides an option to stop the communication.
 
- - ros2 run tcp_examples sensor_client.py
-
+    - ros2 run tcp_examples sensor_client.py
+    
 To Start or Stop the sensor -
-
- - ros2 service call /start_sensor std_srvs/srv/SetBool "data: true"
- - ros2 service call /stop_sensor std_srvs/srv/SetBool "data: false"
- - ros2 param set /sensor_server interval 2000 #set your value
+   - ros2 run tcp_examples set_custom_value.py
+   - ros2 service call /start_sensor std_srvs/srv/SetBool "data: true"
+   - ros2 service call /stop_sensor std_srvs/srv/SetBool "data: false"
+   - ros2 param set /sensor_server interval 2000 #set your value
 
 3.set_custom_value.py - To run the above 3 steps in a single click I implemented user friendly python script gides the user to run the available choices.
 
- - ros2 run tcp_examples set_custom_value.py
+
+    - ros2 run tcp_examples set_custom_value.py
 
 If you want to run the both sensor_server.py and sensor_client.py there is a launch file with set interval
 
