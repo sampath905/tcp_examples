@@ -9,11 +9,11 @@ how this is done.
 
 Taking the above 3 problem statements into consideration I implemented python and cpp scripts - 
 
- # Python - 
+ # Python Implementation - 
 
 1.sensor_server.py - This script is a basic simulation of a sensor server that communicates with a client over TCP while publishing sensor data to ROS 2 topics. It supports the functionality to send periodic data (with a custom interval) and allows the simulation of sensor data like voltage, temperature, and orientation parameters (yaw, pitch, roll).
 
- - ros2 run tcp_examples sensor_server.py 
+ros2 run tcp_examples sensor_server.py 
 
 2.sensor_client.py - This script connects to a sensor server, sends a start command with an interval, receives and decodes sensor data, and provides an option to stop the communication.
 
@@ -33,7 +33,7 @@ If you want to run the both sensor_server.py and sensor_client.py there is a lau
 
     - ros2 launch tcp_examples tcp_sensor.launch.py
 
-# Below is the cpp Implementation -
+# cpp Implementation -
 
     - ros2 run tcp_examples sensor_server
     - ros2 run tcp_examples sensor_client
