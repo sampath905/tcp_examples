@@ -20,7 +20,7 @@ Taking the above 3 problem statements into consideration I implemented python an
     - ros2 run tcp_examples sensor_client.py
     
 To Start or Stop the sensor -
-   - ros2 run tcp_examples set_custom_value.py
+
    - ros2 service call /start_sensor std_srvs/srv/SetBool "data: true"
    - ros2 service call /stop_sensor std_srvs/srv/SetBool "data: false"
    - ros2 param set /sensor_server interval 2000 #set your value
