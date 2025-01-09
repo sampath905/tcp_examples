@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tcp_examples</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="sampathguggilapu@gmail.com">sampath</maintainer>
+  <license>TODO: License declaration</license>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3</exec_depend>
+  <exec_depend>turtlesim</exec_depend>
+  <exec_depend>curses</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>keyboard</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>boost</exec_depend>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>ament_cmake_python</build_depend>
+  <build_depend>ament_python</build_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
