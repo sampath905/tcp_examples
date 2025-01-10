@@ -15,8 +15,9 @@ Taking the above 3 problem statements into consideration I implemented scripts i
 
   ros2 run tcp_examples sensor_server.py 
 
-2.sensor_client.py - This script connects to a sensor server, sends a start command with an interval, receives and decodes sensor data
-     ros2 run tcp_examples sensor_client.py
+2.sensor_client.py - This script connects to a sensor server, sends a start command with an interval, receives and decodes sensor data.
+
+  ros2 run tcp_examples sensor_client.py
     
 To Start or Stop the sensor -
 
