@@ -13,11 +13,11 @@ Taking the above 3 problem statements into consideration I implemented scripts i
 
 1.sensor_server.py - This script is a basic simulation of a sensor server that communicates with a client over TCP while publishing sensor data to ROS 2 topics. It supports the functionality to send periodic data (with a custom interval) and allows the simulation of sensor data like voltage, temperature, and orientation parameters (yaw, pitch, roll).
 
-  ros2 run tcp_examples sensor_server.py 
+    ros2 run tcp_examples sensor_server.py
 
 2.sensor_client.py - This script connects to a sensor server, sends a start command with an interval, receives and decodes sensor data.
 
-  ros2 run tcp_examples sensor_client.py
+    ros2 run tcp_examples sensor_client.py
     
 To Start or Stop the sensor -
 
