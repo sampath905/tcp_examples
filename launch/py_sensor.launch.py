@@ -1,6 +1,6 @@
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, TimerAction
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration
 
@@ -10,7 +10,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'interval', default_value='1000', description='Interval at which to send status messages'),
 
-        # Launch the sensor_server Python node with a specific interval
+        # Launch the sensor_server Python node immediately
         Node(
             package='tcp_examples',
             executable='sensor_server.py',
@@ -19,11 +19,17 @@ def generate_launch_description():
             parameters=[{'interval': LaunchConfiguration('interval')}]
         ),
 
-        # Launch the sensor_client Python node
-        Node(
-            package='tcp_examples',
-            executable='sensor_client.py',
-            name='sensor_client',
-            output='screen'
+        # Adding a 2-second delay before launching the sensor_client node
+        TimerAction(
+            period=2.0,  # 2-second delay
+            actions=[
+                Node(
+                    package='tcp_examples',
+                    executable='sensor_client.py',
+                    name='sensor_client',
+                    output='screen',
+                    parameters=[{'interval': LaunchConfiguration('interval')}]
+                )
+            ]
         ),
     ])
